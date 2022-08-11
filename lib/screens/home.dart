@@ -34,8 +34,8 @@ class _HomepageState extends State<Homepage> {
               child: Column(
                 children: [
                   btn("Play", context),
-                  btn("Score", context),
-                  btn("Contact", context),
+                  btn("Score (WIP)", context),
+                  btn("Contact (WIP)", context),
                 ],
               ),
             ),
@@ -50,17 +50,17 @@ Widget btn(String text, BuildContext context) {
   return Padding(
     padding: const EdgeInsets.only(top: 50),
     child: SizedBox(
-      width: 200,
+      width: 260,
       height: 45,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: Colors.blue[300],
+          primary: Color.fromARGB(130, 123, 84, 213),
           elevation: 6.0,
         ),
         onPressed: () {
           print("${text} button pressed");
           if (text == "Play") {
-            Navigator.pushNamed(context, '/game');
+            Navigator.pushNamed(context, '/sudoku');
           }
         },
         child: Text(

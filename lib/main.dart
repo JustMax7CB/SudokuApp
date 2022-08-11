@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sudoku/screens/game.dart';
 import 'package:sudoku/screens/home.dart';
+import 'package:sudoku/screens/sudoku.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     title: "Sudoku App",
     theme: ThemeData(
       pageTransitionsTheme: const PageTransitionsTheme(
@@ -15,7 +16,7 @@ void main() {
     initialRoute: '/',
     routes: {
       '/': (context) => const Homepage(),
-      '/game': (context) => const Game(),
+      '/sudoku': (context) => const Sudoku(),
     },
   ));
 }
